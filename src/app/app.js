@@ -1,0 +1,5 @@
+function initApp() {
+
+}
+
+export { initApp };
