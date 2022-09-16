@@ -1,0 +1,63 @@
+@use './vendors/normalize';
+@use './vendors/reset';
+@use './utilities/variables' as *;
+
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  color: $textColor;
+  background-color: $backgroundColor;
+}
+
+/* --- ACCESSIBILITY --- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+
+  &:active,
+  &:focus {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    margin: 0;
+    position: static;
+    white-space: inherit;
+  }
+}
+
+.skip-link {
+  &:active,
+  &:focus {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #1b75bc;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 2px solid #333333;
+    z-index: 100;
+  }
+}
+
+.lock-scroll {
+  overflow-y: hidden;
+}
