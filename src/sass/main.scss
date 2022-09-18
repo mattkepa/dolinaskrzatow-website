@@ -5,6 +5,7 @@
 @use './layout/nav';
 @use './components/hamburger-btn';
 @use './components/important-info';
+@use './components/hero-slider';
 
 html {
   scroll-behavior: smooth;

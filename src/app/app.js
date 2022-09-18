@@ -2,6 +2,7 @@ import 'wicg-inert';
 import { handleResizeWindow, getNextWeekendDate } from './utils';
 import { openMainMenu } from './features/mainMenu';
 import { expandImportantInfo } from './features/importantInfo';
+import { initHeroSlider } from './features/sliders/heroSlider';
 
 const header = document.getElementById('header');
 const nav = document.querySelector('.globalnav');
@@ -26,6 +27,9 @@ function initApp() {
   }
 
   getNextWeekendDate();
+
+  // Initialize sliders
+  initHeroSlider();
 
   // Add event listeners to elements
   window.addEventListener('resize', handleResizeWindow);
