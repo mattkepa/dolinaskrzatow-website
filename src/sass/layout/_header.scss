@@ -1,0 +1,146 @@
+@use '../utilities/variables' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 75px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: $headerBgColor;
+  border-bottom: 1px solid rgba(90, 70, 39, 0.3);
+  transition: height 0.56s cubic-bezier(0.52, 0.16, 0.24, 1);
+
+  &.mobile-navbar-expanded,
+  &.desktop-navbar-expanded {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
+.navbar {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+  &__logo {
+    transform: translateX(-50%);
+
+    a {
+      display: block;
+      height: 55px;
+      width: auto;
+    }
+
+    img {
+      height: 55px;
+      width: auto;
+    }
+  }
+
+  .important-info-btn {
+    font-family: 'Roboto';
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: $buttonColor;
+    background-color: $buttonBgColor;
+    max-width: 100px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 10px;
+    align-self: center;
+    order: -1;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $buttonHoverBgColor;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .navbar {
+    .important-info-btn {
+      font-size: 0.7rem;
+      font-weight: 400;
+      line-height: 1.6;
+      max-width: none;
+      padding: 7px 15px;
+      border-radius: 500px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 90px;
+  }
+
+  .navbar {
+    &__logo {
+      a {
+        height: 64px;
+      }
+
+      img {
+        height: 64px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .header {
+    height: 100px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .navbar {
+    &__logo {
+      align-self: auto;
+      transform: translateX(0px);
+
+      a {
+        height: 68px;
+      }
+
+      img {
+        height: 68px;
+      }
+    }
+
+    #menu-btn {
+      display: none;
+    }
+
+    .important-info-btn {
+      order: 0;
+      font-size: 0.6rem;
+      font-weight: 500;
+      padding: 6px 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .navbar {
+    .important-info-btn {
+      font-size: 0.7rem;
+      padding: 7px 16px;
+    }
+  }
+}

@@ -1,6 +1,10 @@
 @use './vendors/normalize';
 @use './vendors/reset';
 @use './utilities/variables' as *;
+@use './layout/header';
+@use './layout/nav';
+@use './components/hamburger-btn';
+@use './components/important-info';
 
 html {
   scroll-behavior: smooth;

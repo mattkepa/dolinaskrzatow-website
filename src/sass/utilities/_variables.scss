@@ -7,13 +7,18 @@ $color-beige: #e1d9c4;
 $color-brown: #2d1e14;
 $color-brown--light: #5a4627;
 $color-claret: #772e2c;
-$color-ivory: #e1d9c4;
+$color-ivory: #fffff0;
 $color-green: #506132;
+$color-green--light: #1db954;
 $color-red: #ff0033;
 $color-red--shade: #ee0022;
 
 $textColor: $color-gray-1;
 $backgroundColor: $color-white;
+
+$headerBgColor: $color-ivory;
+$navTextColor: $color-brown--light;
+$navActiveTextColor: $color-red;
 
 $buttonColor: $color-white;
 $buttonBgColor: $color-red;

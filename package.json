@@ -10,6 +10,9 @@
   },
   "author": "Mateusz Kepa",
   "license": "ISC",
+  "dependencies": {
+    "wicg-inert": "^3.1.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.13",
     "@babel/preset-env": "^7.18.10",

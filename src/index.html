@@ -45,9 +45,11 @@
 
   <title property="name">Dolina Skrzatów</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet">
 
   <script type="application/ld+json">
       {
@@ -86,8 +88,125 @@
 </head>
 
 <body>
-  <h1>Hello world!</h1>
-  <h2>webpack project</h2>
+  <!-- HEADER START -->
+  <header id="header" class="header">
+    <div class="navbar">
+      <a id="skip-link" href="#tresc-glowna" data-target="tresc-glowna" class="sr-only skip-link btn">Przejdź do
+        treści</a>
+      <div class="navbar__logo">
+        <a href="#" data-target="hero-slider">
+          <img src="assets/img/logotypes/logo_DS_color.svg"
+            alt="Dolina Skrzatów - Park Skrzacich Opowieści, Figur i Ekspozycji" />
+        </a>
+      </div>
+      <!-- /.navbar__logo -->
+
+      <button id="menu-btn" class="hamburger hamburger--spring-r" type="button" aria-label="Rozwiń menu główne"
+        aria-expanded="false">
+        <span class="hamburger-box" aria-hidden="true">
+          <span class="hamburger-inner" aria-hidden="true"></span>
+        </span>
+        <span class="sr-only">Rozwiń menu główne</span>
+      </button>
+
+      <nav class="globalnav" hidden>
+        <ul class="globalnav__list">
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#o-nas" data-target="o-nas">O NAS</a>
+          </li>
+          <li class="globalnav__item globalnav__item--dropdown">
+            <span class="dropdown__title">DLA NAUCZYCIELI</span>
+            <div class="dropdown__content">
+              <a class="globalnav__link" href="#szkoly" data-target="szkoly">SZKOŁY</a>
+              <a class="globalnav__link" href="#przedszkola" data-target="przedszkola">PRZEDSZKOLA</a>
+            </div>
+          </li>
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#rodziny" data-target="rodziny">DLA RODZIN</a>
+          </li>
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#warsztaty" data-target="warsztaty">WARSZTATY</a>
+          </li>
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#wynajem" data-target="wynajem">WYNAJEM</a>
+          </li>
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#cennik" data-target="cennik">CENNIK</a>
+          </li>
+          <li class="globalnav__item">
+            <a class="globalnav__link" href="#dane-kontaktowe" data-target="dane-kontaktowe">KONTAKT</a>
+          </li>
+        </ul>
+        <!-- /.globalnav__list -->
+      </nav>
+      <!-- /.globalnav -->
+
+      <button id="important-info-btn" class="important-info-btn" type="button" aria-label="Rozwiń informacje o otwarciu"
+        aria-expanded="false">
+        Kiedy czynne
+      </button>
+
+      <div id="important-info" class="important-info is-hidden" aria-hidden="true">
+        <button id="collapse-important-info-btn" class="important-info__collapse-btn" type="button"
+          aria-label="Zwiń informacje o otwarciu">
+          <span class="collapse-btn__line" aria-hidden="true"></span>
+          <span class="collapse-btn__line" aria-hidden="true"></span>
+          <span class="sr-only">Zwiń informacje o otwarciu</span>
+        </button>
+        <div class="important-info__callout important-info__callout--success">
+          <p class="callout-warning">Uwaga!</p>
+          <p class="callout-description">
+            <!-- to hide - .callout-description--is-hidden -->
+            SEZON JESIENNY <span class="u-text-bolded">ROZPOCZĘTY</span>
+          </p>
+          <!-- /.callout-desctiption -->
+          <p class="callout-info">
+            NAJBLIŻSZY WEEKEND
+            <span id="callout-info-date" class="callout-info__date"></span> -
+            <span class="callout-info__whether-open">CZYNNE</span>
+          </p>
+          <!-- /.callout-info -->
+          <!-- <hr /> -->
+          <!-- <p class="callout-desctiption">
+                            <br>
+                            Przekaż <span class="u-text-bolded">1% podatku</span> dla Stowarzyszenia "Dolina Skrzatów".<br>
+                            KRS: <span class="u-text-bolded">0000 215 720</span><br>
+                            Cel szczegółowy: <span class="u-text-bolded">DOLINA SKRZATÓW</span>
+                        </p> -->
+        </div>
+        <!-- /.important-info__callout -->
+        <p class="important-info__heading">Wejścia indywidualne</p>
+        <p class="important-info__content">
+          <span class="u-text-muted">Sobota - Niedziela</span> -
+          <span class="u-text-bolded">11:00 - 16:00</span><span class="u-text-red">*</span>
+        </p>
+        <!-- /.important-info__content -->
+        <p class="important-info__heading">Wycieczki grupowe</p>
+        <p class="important-info__content">
+          <span class="u-text-muted">Poniedziałek - Piątek</span>
+          - <span class="u-text-bolded">09:00 - 12:00</span><span class="u-text-red">*</span>
+        </p>
+        <!-- /.important-info__content -->
+        <p class="important-info__heading">Informacje, zapisy, kontakt</p>
+        <p class="important-info__content">
+          <span class="u-text-muted">tel.</span> -
+          <span class="u-text-bolded">503 123 436</span>
+        </p>
+        <!-- /.important-info__content -->
+        <p class="important-info__annotation">
+          <span class="u-text-bolded u-text-red">*</span> - dokładne godziny
+          tur wejść w zakładce <span class="u-text-bolded">Cennik</span>
+        </p>
+        <!-- /.important-info__annotation -->
+      </div>
+      <!-- /.important-info -->
+
+
+    </div>
+    <!-- /.navbar -->
+  </header>
+  <!-- /.header-->
+  <!-- HEADER END -->
 </body>
 
 </html>

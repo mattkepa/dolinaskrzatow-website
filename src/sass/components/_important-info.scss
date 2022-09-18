@@ -1,0 +1,261 @@
+@use '../utilities/variables' as *;
+
+.important-info {
+  display: flex;
+  flex-direction: column;
+  order: 2;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 0;
+  transform: translate3d(0, -100px, 0);
+  transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1) 0.1s,
+    opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1) 0.2s;
+
+  &.is-hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &__collapse-btn {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: flex-end;
+
+    &:hover .collapse-btn__line {
+      background-color: $navActiveTextColor;
+    }
+  }
+
+  &__callout {
+    padding: 20px;
+    border: 1px solid rgba(90, 70, 39, 0.3);
+    border-left-width: 5px;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    &--success {
+      border-left-color: $color-green--light;
+
+      .callout-warning {
+        display: none;
+      }
+    }
+
+    &--danger {
+      border-left-color: $color-red--shade;
+    }
+
+    &--warning {
+      border-left-color: #f0ad4e;
+    }
+  }
+
+  &__heading {
+    color: $navTextColor;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  &__content {
+    color: $color-brown--light;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    span.u-text-muted {
+      opacity: 0.75;
+    }
+
+    span.u-text-bolded {
+      font-weight: 700;
+    }
+
+    span.u-text-red {
+      color: $color-red;
+    }
+  }
+
+  &__annotation {
+    font-size: 0.7rem;
+    color: $color-gray-2;
+    margin-top: 15px;
+
+    span.u-text-red {
+      color: $color-red !important;
+    }
+
+    span.u-text-bolded {
+      font-weight: 600;
+      color: $color-brown--light;
+    }
+  }
+}
+
+.collapse-btn__line {
+  display: inline-block;
+  width: 15px;
+  height: 2px;
+  background-color: $navTextColor;
+  position: absolute;
+  top: 15px;
+
+  &:nth-child(1) {
+    left: 0;
+    transform: translateY(-1px) rotate(-45deg);
+  }
+
+  &:nth-child(2) {
+    right: 0;
+    transform: translateY(-1px) rotate(45deg);
+  }
+}
+
+.callout {
+  &-warning {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: $color-brown;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  &-info {
+    font-family: 'Roboto';
+    font-size: 0.75rem;
+    line-height: 1.6;
+    color: $color-gray-2;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &__whether-open {
+      color: $color-gray-1;
+      font-weight: 700;
+    }
+
+    &__date {
+      //   color: $color-gray-3;
+      color: $color-brown--light;
+      opacity: 0.6;
+      font-weight: 500;
+    }
+  }
+
+  &-description {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    color: $navTextColor;
+    margin-bottom: 10px;
+
+    &--is-hidden {
+      display: none;
+    }
+
+    span.u-text-bolded {
+      font-weight: 700;
+      color: $color-brown;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .important-info {
+    &__heading {
+      font-size: 0.95rem;
+    }
+    &__content {
+      font-size: 0.85rem;
+    }
+    &__annotation {
+      font-size: 0.75rem;
+    }
+  }
+
+  .callout {
+    &-info {
+      font-size: 0.8rem;
+    }
+
+    &-description {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .important-info {
+    &__heading {
+      font-size: 1.1rem;
+    }
+    &__content {
+      font-size: 0.95rem;
+    }
+  }
+
+  .callout {
+    &-warning {
+      font-size: 1.35rem;
+    }
+
+    &-info {
+      font-size: 0.9rem;
+    }
+
+    &-description {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .important-info {
+    order: 0;
+
+    &__heading {
+      font-size: 1.2rem;
+    }
+    &__content {
+      font-size: 1.1rem;
+    }
+    &__annotation {
+      font-size: 0.9rem;
+    }
+  }
+
+  .callout {
+    &-warning {
+      font-size: 1.5rem;
+    }
+
+    &-info {
+      font-size: 1rem;
+    }
+
+    &-description {
+      font-size: 1.1rem;
+    }
+  }
+}
