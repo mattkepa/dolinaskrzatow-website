@@ -3,6 +3,7 @@ import { handleResizeWindow, getNextWeekendDate } from './utils';
 import { openMainMenu } from './features/mainMenu';
 import { expandImportantInfo } from './features/importantInfo';
 import { initHeroSlider } from './features/sliders/heroSlider';
+import { openVideoModal } from './features/videoModal';
 
 const header = document.getElementById('header');
 const nav = document.querySelector('.globalnav');
@@ -15,10 +16,13 @@ const importantInfoBlock = document.getElementById('important-info');
 const collapseImportantInfoBtn = document.getElementById(
   'collapse-important-info-btn'
 );
+const videoModalBtn = document.getElementById('video-modal-btn');
+const videoModal = document.getElementById('video-modal');
 
 function initApp() {
   // Make elements unfocusable for keyboard tab users when modal hidden
   importantInfoBlock.inert = true;
+  videoModal.inert = true;
 
   if (window.innerWidth >= 992) {
     if (nav.hasAttribute('hidden')) {
@@ -35,6 +39,7 @@ function initApp() {
   window.addEventListener('resize', handleResizeWindow);
   hamburgerBtn.addEventListener('click', openMainMenu);
   importantInfoBtn.addEventListener('click', expandImportantInfo);
+  videoModalBtn.addEventListener('click', openVideoModal);
 }
 
 export {
@@ -48,4 +53,6 @@ export {
   importantInfoBtn,
   importantInfoBlock,
   collapseImportantInfoBtn,
+  videoModalBtn,
+  videoModal,
 };
