@@ -222,6 +222,10 @@
 
     &__paragraph {
       font-size: 1.05rem;
+
+      &--muted {
+        font-size: 0.95rem;
+      }
     }
 
     .content-group {
@@ -278,6 +282,10 @@
 
     &__paragraph {
       font-size: 1.1rem;
+
+      &--muted {
+        font-size: 1.05rem;
+      }
     }
 
     .content-group {
