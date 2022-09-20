@@ -45,6 +45,18 @@
     color: $color-brown--light;
     line-height: 1.3;
     text-align: justify;
+    margin-bottom: 40px;
+
+    & > span.u-text-muted {
+      font-weight: 700;
+      opacity: 0.65;
+    }
+
+    & > span.u-text-bolded {
+      font-weight: 600;
+      color: $color-brown;
+      opacity: 0.85;
+    }
   }
 
   &__content-group {
