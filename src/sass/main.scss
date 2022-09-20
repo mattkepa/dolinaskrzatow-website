@@ -3,10 +3,12 @@
 @use './utilities/variables' as *;
 @use './layout/header';
 @use './layout/nav';
+@use './layout/section';
 @use './components/hamburger-btn';
 @use './components/important-info';
 @use './components/hero-slider';
 @use './components/video-modal';
+@use './components/about-section';
 
 html {
   scroll-behavior: smooth;
