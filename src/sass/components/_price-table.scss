@@ -1,0 +1,184 @@
+@use '../utilities/variables' as *;
+
+.price-table {
+  margin-bottom: 40px;
+
+  &:first-of-type {
+    margin-top: -10px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-brown;
+    opacity: 0.8;
+    margin-bottom: 0.8em;
+
+    & > span.u-text-muted {
+      opacity: 0.7;
+      font-weight: 600;
+      margin-right: 0.6em;
+    }
+  }
+}
+
+table.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  caption-side: bottom;
+  border: 2px solid rgba(90, 70, 39, 0.6);
+  border: 2px solid $color-brown--light;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.75rem;
+
+  th,
+  td {
+    padding: 0.7rem;
+    border: 2px solid rgba(90, 70, 39, 0.6);
+  }
+
+  thead tr {
+    border-bottom: 3px solid rgba(90, 70, 39, 0.7);
+  }
+
+  thead th {
+    font-weight: 700;
+    color: $color-brown;
+    opacity: 0.9;
+
+    & > span.u-text-muted {
+      opacity: 0.6;
+      font-weight: 600;
+    }
+  }
+
+  tbody td {
+    font-weight: 600;
+    color: $color-brown--light;
+
+    &.u-text-bolded {
+      font-size: 0.8rem;
+      color: $color-brown;
+      opacity: 0.85;
+    }
+  }
+
+  tbody td.cell-center,
+  thead th.cell-center {
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  tbody td.cell-left,
+  thead th.cell-left {
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  caption {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: $color-brown--light;
+    opacity: 0.6;
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 10px;
+
+    & > span.u-text-bolded {
+      font-weight: 700;
+      color: $color-brown;
+    }
+  }
+}
+
+@media screen and (min-width: 360px) {
+  .price-table {
+    &__heading {
+      font-size: 1.3rem;
+    }
+  }
+
+  table.table {
+    font-size: 0.8rem;
+
+    tbody td.u-text-bolded {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .price-table {
+    &__heading {
+      font-size: 1.4rem;
+    }
+  }
+
+  table.table {
+    font-size: 0.9rem;
+
+    tbody td.u-text-bolded {
+      font-size: 0.95rem;
+    }
+
+    caption {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .price-table {
+    &__heading {
+      font-size: 1.5rem;
+    }
+  }
+
+  table.table {
+    font-size: 0.95rem;
+
+    tbody td.u-text-bolded {
+      font-size: 1rem;
+    }
+
+    caption {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  table.table {
+    font-size: 1rem;
+
+    tbody td.u-text-bolded {
+      font-size: 1.05rem;
+    }
+
+    caption {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-table {
+    &__heading {
+      font-size: 1.6rem;
+    }
+  }
+
+  table.table {
+    font-size: 1.1rem;
+
+    tbody td.u-text-bolded {
+      font-size: 1.15rem;
+    }
+  }
+}
