@@ -1,5 +1,6 @@
 @use './vendors/normalize';
 @use './vendors/reset';
+@use './vendors/glider';
 @use './utilities/variables' as *;
 @use './layout/header';
 @use './layout/nav';
@@ -10,6 +11,7 @@
 @use './components/video-modal';
 @use './components/about-section';
 @use './components/price-table';
+@use './components/testimonials-slider';
 
 html {
   scroll-behavior: smooth;

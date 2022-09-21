@@ -1,8 +1,10 @@
 import 'wicg-inert';
+import 'glider-js';
 import { handleResizeWindow, getNextWeekendDate } from './utils';
 import { openMainMenu } from './features/mainMenu';
 import { expandImportantInfo } from './features/importantInfo';
 import { initHeroSlider } from './features/sliders/heroSlider';
+import { initTesimonialsSlider } from './features/sliders/testimonialsSlider';
 import { openVideoModal } from './features/videoModal';
 
 const header = document.getElementById('header');
@@ -34,6 +36,7 @@ function initApp() {
 
   // Initialize sliders
   initHeroSlider();
+  initTesimonialsSlider();
 
   // Add event listeners to elements
   window.addEventListener('resize', handleResizeWindow);

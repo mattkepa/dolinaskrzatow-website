@@ -183,6 +183,10 @@
     background-color: $color-white;
   }
 
+  &--secondary {
+    background-color: $color-ivory;
+  }
+
   &--columns {
     .l-container {
       display: flex;
