@@ -1,0 +1,41 @@
+.partners-logo {
+  display: block;
+  text-align: center;
+
+  &__img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .partners-logo {
+    &__img {
+      height: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .partners-logo {
+    &__img {
+      height: 80px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .partners-logo {
+    &__img {
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .partners-logo {
+    &__img {
+      height: 110px;
+    }
+  }
+}
