@@ -68,10 +68,6 @@ module.exports = merge(commonConfig, {
           from: path.resolve(__dirname, 'src/assets/img/icons'),
           to: path.resolve(__dirname, 'build', 'assets/img/icons'),
         },
-        {
-          from: path.resolve(__dirname, 'src/assets/pdf'),
-          to: path.resolve(__dirname, 'build', 'assets/pdf'),
-        },
       ],
     }),
   ],
