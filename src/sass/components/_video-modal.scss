@@ -7,7 +7,8 @@
   align-items: center;
   padding: 10px 16px;
   border-radius: 3px;
-  background-color: #efefef;
+  // background-color: #efefef;
+  background-color: $color-ivory;
   transition: all 0.2s cubic-bezier(0.52, 0.16, 0.24, 1);
 
   &:hover {
