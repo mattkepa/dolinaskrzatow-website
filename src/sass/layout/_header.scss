@@ -84,12 +84,22 @@
   }
 }
 
+@media screen and (min-width: 576px) {
+  .navbar {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .header {
     height: 90px;
   }
 
   .navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+
     &__logo {
       a {
         height: 64px;
@@ -110,6 +120,9 @@
   }
 
   .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+
     &__logo {
       align-self: auto;
       transform: translateX(0px);
@@ -129,7 +142,7 @@
 
     .important-info-btn {
       order: 0;
-      font-size: 0.6rem;
+      font-size: 0.65rem;
       font-weight: 500;
       padding: 6px 14px;
     }

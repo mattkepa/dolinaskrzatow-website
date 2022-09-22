@@ -39,7 +39,7 @@ function scrollToSection() {
     }
     jump(`#${this.getAttribute('data-target')}`, {
       duration: 1000,
-      offset: -100,
+      offset: -99,
       callback: undefined,
       easing: easeInOutQuad,
       a11y: false,
