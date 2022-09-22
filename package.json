@@ -11,7 +11,9 @@
   "author": "Mateusz Kepa",
   "license": "ISC",
   "dependencies": {
+    "@sidsbrmnn/scrollspy": "^1.1.0",
     "glider-js": "^1.7.7",
+    "jump.js": "^1.0.2",
     "wicg-inert": "^3.1.2"
   },
   "devDependencies": {

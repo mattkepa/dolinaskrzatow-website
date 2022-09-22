@@ -1,6 +1,8 @@
 import 'wicg-inert';
 import 'glider-js';
+import scrollSpy from '@sidsbrmnn/scrollspy';
 import { handleResizeWindow, getNextWeekendDate } from './utils';
+import { useSmoothScroll } from './features/smoothScroll';
 import { openMainMenu } from './features/mainMenu';
 import { expandImportantInfo } from './features/importantInfo';
 import { initHeroSlider } from './features/sliders/heroSlider';
@@ -34,6 +36,14 @@ function initApp() {
   }
 
   getNextWeekendDate();
+  useSmoothScroll();
+  scrollSpy(navList, {
+    sectionSelector: '.section--main',
+    targetSelector: '.globalnav__item',
+    hrefAttribute: 'data-ref',
+    activeClass: 'is-active',
+    offset: 100,
+  });
 
   // Initialize sliders
   initHeroSlider();

@@ -111,30 +111,32 @@
 
       <nav class="globalnav" hidden>
         <ul class="globalnav__list">
-          <li class="globalnav__item">
+          <li class="globalnav__item" data-ref="#o-nas">
             <a class="globalnav__link" href="#o-nas" data-target="o-nas">O NAS</a>
           </li>
-          <li class="globalnav__item globalnav__item--dropdown">
-            <span class="dropdown__title">DLA NAUCZYCIELI</span>
+          <li class="globalnav__item globalnav__item--dropdown" data-ref="#szkoly-i-przedszkola">
+            <a class="dropdown__title globalnav__link" href="#szkoly-i-przedszkola"
+              data-target="szkoly-i-przedszkola">DLA NAUCZYCIELI</a>
             <div class="dropdown__content">
-              <a class="globalnav__link" href="#szkoly" data-target="szkoly">SZKOŁY</a>
-              <a class="globalnav__link" href="#przedszkola" data-target="przedszkola">PRZEDSZKOLA</a>
+              <a class="globalnav__link globalnav__link--small" href="#szkoly" data-target="szkoly">SZKOŁY</a>
+              <a class="globalnav__link globalnav__link--small" href="#przedszkola"
+                data-target="przedszkola">PRZEDSZKOLA</a>
             </div>
           </li>
-          <li class="globalnav__item">
+          <li class="globalnav__item" data-ref="#rodziny">
             <a class="globalnav__link" href="#rodziny" data-target="rodziny">DLA RODZIN</a>
           </li>
-          <li class="globalnav__item">
+          <li class="globalnav__item" data-ref="#warsztaty">
             <a class="globalnav__link" href="#warsztaty" data-target="warsztaty">WARSZTATY</a>
           </li>
-          <li class="globalnav__item">
+          <li class="globalnav__item" data-ref="#wynajem">
             <a class="globalnav__link" href="#wynajem" data-target="wynajem">WYNAJEM</a>
           </li>
-          <li class="globalnav__item">
+          <li class="globalnav__item" data-ref="#cennik">
             <a class="globalnav__link" href="#cennik" data-target="cennik">CENNIK</a>
           </li>
-          <li class="globalnav__item">
-            <a class="globalnav__link" href="#dane-kontaktowe" data-target="dane-kontaktowe">KONTAKT</a>
+          <li class="globalnav__item" data-ref="#kontakt">
+            <a class="globalnav__link" href="#kontakt" data-target="kontakt">KONTAKT</a>
           </li>
         </ul>
         <!-- /.globalnav__list -->
@@ -259,7 +261,7 @@
 
   <!-- MAIN CONTENT START -->
   <main id="tresc-glowna">
-    <section id="o-nas" class="section about-us">
+    <section id="o-nas" class="section section--main about-us">
       <div class="l-container">
         <!-- <h2 class="about-us__heading">O nas</h2> -->
         <p class="about-us__lead">
@@ -291,7 +293,7 @@
       </div>
     </section>
     <!-- /.about-us__lead -->
-    <section id="szkoly-i-przedszkola" class="section section--float">
+    <section id="szkoly-i-przedszkola" class="section section--float section--main">
       <div class="l-container">
         <img class="section__img" src="./assets/img/section_images/schools.png"
           alt="Grupa dzieci przy wkspozycji podczas oprowadzania przez Skrzatologa" />
@@ -309,7 +311,7 @@
             zajęcia terenowe oraz zajęcia ekologiczne. Dostosowujemy program do potrzeb osób z niepełnosprawnościami.
           </p>
           <!-- /.section__lead -->
-          <div class="section__content-group">
+          <div id="szkoly" class="section__content-group">
             <h3 class="content-group__heading">Szkoły</h3>
             <p class="content-group__paragraph">
               Dla grup szkolnych oferujemy kompletną i wartościową wycieczkę. Wizytę w Dolinie Skrzatów łatwo można
@@ -367,7 +369,7 @@
 
           <hr style="border: 1px solid #5a4627; opacity: 0.1" />
 
-          <div class="section__content-group">
+          <div id="przedszkola" class="section__content-group">
             <h3 class="content-group__heading">Przedszkola</h3>
             <p class="content-group__paragraph">
               Sugerowany wiek dzieci <span class=" u-text-bolded">min. 5 lat</span>.<br />
@@ -431,7 +433,7 @@
       <div class="divider"></div>
     </div>
 
-    <section id="rodziny" class="section section--float">
+    <section id="rodziny" class="section section--float section--main">
       <div class="l-container">
         <img class="section__img" src="./assets/img/section_images/family.png"
           alt="Uśmiechnięty dziadek trzymający na barkach wnuczka" />
@@ -489,7 +491,7 @@
       <div class="divider"></div>
     </div>
 
-    <section id="warsztaty" class="section section--float">
+    <section id="warsztaty" class="section section--float section--main">
       <div class="l-container">
         <img class="section__img" src="./assets/img/section_images/workshops.png"
           alt="Matka z córką robiące motanki na warsztatach w chramie" />
@@ -717,7 +719,7 @@
       <div class="divider"></div>
     </div>
 
-    <section id="wynajem" class="section">
+    <section id="wynajem" class="section section--main">
       <div class="l-container">
         <div class="section__content" style="margin-top: 0">
           <h2 class="section__heading">
@@ -784,7 +786,7 @@
       <div class="divider"></div>
     </div>
 
-    <section id="cennik" class="section">
+    <section id="cennik" class="section section--main">
       <div class="l-container">
         <div class="section__content" style="margin-top: 0">
           <h2 class="section__heading">Cennik</h2>
@@ -871,7 +873,7 @@
     </section>
     <!-- /.section -->
 
-    <section id="kontakt" class="section section--light section--columns">
+    <section id="kontakt" class="section section--light section--columns section--main">
       <div class="l-container">
         <div class="section__content section__content--small" style="margin-top: 0">
           <h2 class="section__heading">
