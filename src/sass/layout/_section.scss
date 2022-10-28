@@ -187,6 +187,19 @@
     background-color: $color-ivory;
   }
 
+  &--other {
+    background-color: $color-gray-4;
+
+    .section__heading {
+      font-size: 1rem;
+      color: $color-gray-1;
+
+      .u-text-muted {
+        color: $color-gray-2;
+      }
+    }
+  }
+
   &--columns {
     .l-container {
       display: flex;
@@ -334,6 +347,12 @@
       }
     }
 
+    &--other {
+      .section__heading {
+        font-size: 1.05rem;
+      }
+    }
+
     &-separator {
       .divider {
         max-width: 708px;
@@ -450,6 +469,12 @@
     .section__content--small .content-group {
       &__info {
         font-size: 0.95rem;
+      }
+    }
+
+    &--other {
+      .section__heading {
+        font-size: 1.1rem;
       }
     }
 

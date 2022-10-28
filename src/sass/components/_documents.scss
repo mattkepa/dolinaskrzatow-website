@@ -1,0 +1,39 @@
+@use '../utilities/variables' as *;
+
+.documents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.document {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: $color-gray-1;
+  margin-bottom: 10px;
+
+  &__icon {
+    margin-right: 10px;
+    svg {
+      height: 28px;
+    }
+  }
+
+  &__name {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  &:hover {
+    color: $color-red--shade;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
