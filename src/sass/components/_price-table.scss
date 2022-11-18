@@ -97,6 +97,19 @@ table.table {
   }
 }
 
+table.table--no-border {
+  border: none;
+
+  th,
+  td {
+    border: none;
+  }
+
+  thead tr {
+    border-bottom: none;
+  }
+}
+
 @media screen and (min-width: 360px) {
   .price-table {
     &__heading {
